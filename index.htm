@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="stye.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">martin</div>
+        <div class="container">
+          <div class="row text-center">
+            <div class="col-12">
+              <div class="card">
+                <h1 id="time" class="time"></h1>
+                <h1 id="date" class="date"></h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <main>
+        <img src="./img/me3 (2).jpg" alt="" />
+        <div class="name">
+          <h1>martin ogbemudia</h1>
+          <div class="job">Frontend deveoper</div>
+        </div>
+      </main>
+    </header>
+
+    <section>
+      <div class="goals">
+        <img src="" alt="" />
+        <div class="tasks">
+          <h1>My Tech Goas for the Next Two Years</h1>
+          <div class="glo">
+            <h2>year 1 Goals</h2>
+            <h2>🌱 Master Core Technologies</h2>
+            <h2>Action</h2>
+            <div class="">
+              <p>
+                Complete online courses or tutorials on advanced CSS techniques
+                (e.g., Flexbox, Grid).
+              </p>
+              <p>Build complex layouts and animations to solidify skills.</p>
+              <p>
+                Experiment with modern JavaScript frameworks like React or
+                Vue.js.
+              </p>
+            </div>
+            <h1>🚀 Learn Build Tools and Workflow</h1>
+            <div class="">
+              <p>
+                Familiarize with task runners (e.g., Gulp) and module bundlers
+                (e.g., Webpack).
+              </p>
+              <p>
+                Implement version control (e.g., Git) for collaborative
+                projects.
+              </p>
+              <p>
+                Integrate continuous integration/continuous deployment (CI/CD)
+                practices.
+              </p>
+            </div>
+          </div>
+
+          <div class="glo">
+            <h2>year 2 Goals</h2>
+            <h2>🌱 Become proficient in advanced frontend frameworks.</h2>
+            <h2>Action</h2>
+            <div class="">
+              <p>
+                Dive deeper into a preferred JavaScript framework (e.g., React
+                Native for mobile development).
+              </p>
+              <p>
+                Explore state management tools (e.g., Redux) and advanced
+                component patterns.
+              </p>
+              <p>
+                Contribute to framework documentation or community projects.
+              </p>
+            </div>
+            <h1>🌐 Enhance Cross-Browser Compatibility</h1>
+            <div class="">
+              <p>
+                Test applications rigorously using browser developer tools and
+                automation tools (e.g., Selenium).
+              </p>
+              <p>
+                Learn techniques to handle browser-specific quirks and
+                performance optimizations.
+              </p>
+              <p>Stay updated with latest browser updates and trends.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="contact">
+        <div class="">Lets connect and colaborate</div>
+        <div class="hng">
+          <div>Learn About HNG</div>
+          <div class="inks">
+            <a href="https://keyword.dog/">Keyword</a>
+            <a href="https://scrapeanyweb.site/">scrapeanyweb</a>
+            <a href="https://hng.tech/learn">HNG</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      var today = new Date();
+      var day = today.getDate();
+      var month = today.getMonth() + 1;
+
+      function appendZero(value) {
+        return "0" + value;
+      }
+
+      function theTime() {
+        var d = new Date();
+        document.getElementById("time").innerHTML =
+          d.toLocaleTimeString("en-US");
+      }
+
+      if (day < 10) {
+        day = appendZero(day);
+      }
+
+      if (month < 10) {
+        month = appendZero(month);
+      }
+
+      today = day + "/" + month + "/" + today.getFullYear();
+
+      document.getElementById("date").innerHTML = today;
+
+      var myVar = setInterval(function () {
+        theTime();
+      }, 1000);
+    </script>
+  </body>
+</html>
